@@ -1,0 +1,210 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+
+    overflow-x: hidden;
+}
+
+.menuButton {
+    position: fixed;
+    z-index: 1;
+
+    top: 0;
+    left: -8vw;
+
+    width: 16vw;
+    height: 8vw;
+
+    border-radius: 0 0 8vw 8vw;
+
+    background-color: #ff7979;
+
+    overflow: hidden;
+    transform-origin: top center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuButton>div {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.burger>div,
+.close>div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.close>div:first-child {
+    transform: translate(0, 100%) rotate(-45deg);
+}
+
+.close>div:last-child {
+    transform: translate(0, -100%) rotate(45deg)
+}
+
+article {
+    margin: 0 auto;
+
+    background-color: white;
+
+    padding: 5%;
+
+    transform-origin: top left;
+}
+
+article>div {
+    margin: auto;
+    width: 65vw;
+}
+
+small {
+    color: gray;
+    font-style: italic;
+}
+
+p {
+    color: #333;
+    line-height: 1.5;
+}
+
+article img {
+    width: 100%;
+}
+
+h1,
+menu,
+ul,
+menu p{
+    margin: 0;
+    padding: 0;
+}
+
+menu{
+    position: fixed;
+    left: -15vw;
+    bottom: 0;
+}
+
+menu ul{
+    list-style-type: none;
+}
+
+menu p{
+    color: white;
+    text-transform: uppercase;
+}
+
+menu img{
+    width: 30px;
+    height: 30px;
+}
+
+menu div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom:60px;
+}
+
+.rotateToClose,
+.rotateToBurger,
+.rotateArticle,
+.returnArticle,
+.displayMenu {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.rotateToClose {
+    animation-name: rotateToClose;
+}
+
+.rotateToBurger {
+    animation-name: rotateToBurger;
+}
+
+.rotateArticle {
+    animation-name: rotateArticle;
+}
+
+.returnArticle {
+    animation-name: returnArticle;
+}
+
+.displayMenu{
+    animation-name: displayMenu;
+}
+
+@keyframes rotateToClose {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes rotateToBurger {
+    from {
+        transform: rotate(-90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateArticle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes returnArticle {
+    from {
+        transform: rotate(-20deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes hideMenu {
+    from{
+        left: 2vw;
+    }
+    to{
+        left: -15vw;
+    }
+}
+
+@keyframes displayMenu {
+    from{
+        left: -15vw;
+    }
+    to{
+        left: 2vw;
+    }
+}
