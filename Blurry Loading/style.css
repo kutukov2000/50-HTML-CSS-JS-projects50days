@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url(images/man.avif);
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: hidden;
+
+    animation-name: nonBlured;
+    animation-duration: 5s;
+} 
+
+body,h1{
+    animation-fill-mode: forwards;
+}
+
+@keyframes nonBlured {
+    from{
+        backdrop-filter: blur(100px);
+    }
+    to{
+        backdrop-filter: blur(0px);
+    }
+}
+
+div{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+
+    animation-name: textOpacity;
+    animation-duration: 3.5s;
+    animation-delay: 1.5s;
+}
+
+@keyframes textOpacity {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
