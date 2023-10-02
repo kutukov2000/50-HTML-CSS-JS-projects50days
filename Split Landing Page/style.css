@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+
+    transition: 1s;
+}
+
+.leftSide{
+    grid-template-columns: 3fr 1fr;
+}
+
+.rightSide{
+    grid-template-columns: 1fr 3fr;
+}
+
+div,
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+
+    text-wrap: nowrap;
+}
+
+#leftDiv {
+    background-image: url("https://images.immediate.co.uk/production/volatile/sites/3/2020/08/playstation-5-77d37a0.jpg?quality=90&resize=980,654");
+}
+
+#rightDiv {
+    background-image: url("https://i.ytimg.com/vi/0tUqIHwHDEc/maxresdefault.jpg");
+}
+
+a {
+    border: 2px solid white;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: bolder;
+
+    height: 10vh;
+    width: 15vw;
+
+    transition: 0.1s;
+}
+
+#leftDiv a:hover {
+    background-color: #5754ec;
+    border-color: #5754ec;
+}
+
+#rightDiv a:hover {
+    background-color: #1c7a1c;
+    border-color: #1c7a1c;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+}
+
+#leftDiv .overlay{
+    background-color: rgba(87, 84, 236, 0.5);
+}
+
+#rightDiv .overlay{
+    background-color: rgba(28, 122, 28,0.5);
+}
